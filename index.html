@@ -73,6 +73,28 @@
           </li>
         </ul>
       </div>
+
+      <!-- main -->
+
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+
+          <!-- Search -->
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Pesquise Aqui" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+          <!-- UserImg -->
+          <div class="user">
+            <img src="user.jpg" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
@@ -92,6 +114,17 @@
         this.classList.add("hovered");
       }
       list.forEach((item) => item.addEventListener("mouseover", activeLink));
+
+      //MenuToggle
+
+      let toggle = document.querySelector(".toggle");
+      let navegation = document.querySelector(".navegation");
+      let main = document.querySelector(".main");
+
+      toggle.onclick = function () {
+        navegation.classList.toggle("active");
+        main.classList.toggle("active");
+      };
     </script>
   </body>
 </html>
